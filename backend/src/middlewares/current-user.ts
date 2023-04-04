@@ -20,7 +20,6 @@ export const currentUser = (
   res: Response,
   next: NextFunction
 ) => {
-  console.log('Estoy en current user');
   if (!req.headers.authorization) {
     return next();
   }
