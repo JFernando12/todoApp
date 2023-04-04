@@ -8,6 +8,8 @@ router.post('/tasks', requireAuth, async (req: Request, res: Response) => {
   const userId = req.currentUser!.id;
   const { name, description } = req.body;
 
+  console.log(req.currentUser);
+
   const task = Task.build({
     name,
     description,
@@ -16,7 +18,7 @@ router.post('/tasks', requireAuth, async (req: Request, res: Response) => {
   });
   await task.save();
 
-  res.send(task);
+  res.send(req.currentUser);
 });
 
 export { router as routerAddTask };

@@ -1,122 +1,62 @@
 [
   {
-    "email": "john.doe@example.com",
-    "password": "P@ssw0rd123",
-    "__v": 0,
-    "id": "642c3ddd7304f5758c196b75"
-  },
-  {
-    "email": "jane.smith@example.com",
-    "password": "MyP@ssw0rd",
-    "__v": 0,
-    "id": "642c3ddd7304f5758c196b76"
-  },
-  {
-    "email": "samuel.jackson@example.com",
-    "password": "SecureP@ssword1",
-    "__v": 0,
-    "id": "642c3ddd7304f5758c196b77"
-  },
-  {
-    "email": "susan.adams@example.com",
-    "password": "P@ssword321",
-    "__v": 0,
-    "id": "642c3ddd7304f5758c196b78"
-  },
-  {
-    "email": "david.brown@example.com",
-    "password": "MyP@ssw0rd123",
-    "__v": 0,
-    "id": "642c3ddd7304f5758c196b79"
-  },
-  {
-    "email": "kate.johnson@example.com",
-    "password": "P@ssword987",
-    "__v": 0,
-    "id": "642c3ddd7304f5758c196b7a"
-  },
-  {
     "email": "jimmy.nguyen@example.com",
-    "password": "SecureP@ssword2",
+    "password": "$2b$05$nhX1.Tu74RCuYpSR1zF4peCL0WwinUoa9a6LBQUXRkSprD3xNTJDa",
     "__v": 0,
-    "id": "642c3ddd7304f5758c196b7b"
+    "id": "642c70783e48628e24e78a27"
   },
   {
     "email": "emily.harris@example.com",
-    "password": "MyP@ssword456",
+    "password": "$2b$05$gbGk5FAELCPhrClxIbwVJu1/MhGkaeaJBt2Vkg/zSWw1rHy0tfF6y",
     "__v": 0,
-    "id": "642c3ddd7304f5758c196b7c"
-  },
-  {
-    "email": "william.taylor@example.com",
-    "password": "P@ssword654",
-    "__v": 0,
-    "id": "642c3ddd7304f5758c196b7d"
-  },
-  {
-    "email": "natalie.chen@example.com",
-    "password": "SecureP@ssword3",
-    "__v": 0,
-    "id": "642c3ddd7304f5758c196b7e"
-  },
-  {
-    "email": "john.doe@example.com",
-    "password": "P@ssw0rd123",
-    "__v": 0,
-    "id": "642c3de6723d84334640fcf8"
-  },
-  {
-    "email": "jane.smith@example.com",
-    "password": "MyP@ssw0rd",
-    "__v": 0,
-    "id": "642c3de6723d84334640fcf9"
-  },
-  {
-    "email": "samuel.jackson@example.com",
-    "password": "SecureP@ssword1",
-    "__v": 0,
-    "id": "642c3de6723d84334640fcfa"
+    "id": "642c70783e48628e24e78a28"
   },
   {
     "email": "susan.adams@example.com",
-    "password": "P@ssword321",
+    "password": "$2b$05$MnXyzpoM1A4mg63B.H5Zk.LJbdpKhoDpDCnRt0Jr.2.pjb1wd6MCS",
     "__v": 0,
-    "id": "642c3de6723d84334640fcfb"
-  },
-  {
-    "email": "david.brown@example.com",
-    "password": "MyP@ssw0rd123",
-    "__v": 0,
-    "id": "642c3de6723d84334640fcfc"
-  },
-  {
-    "email": "kate.johnson@example.com",
-    "password": "P@ssword987",
-    "__v": 0,
-    "id": "642c3de6723d84334640fcfd"
-  },
-  {
-    "email": "jimmy.nguyen@example.com",
-    "password": "SecureP@ssword2",
-    "__v": 0,
-    "id": "642c3de6723d84334640fcfe"
-  },
-  {
-    "email": "emily.harris@example.com",
-    "password": "MyP@ssword456",
-    "__v": 0,
-    "id": "642c3de6723d84334640fcff"
-  },
-  {
-    "email": "william.taylor@example.com",
-    "password": "P@ssword654",
-    "__v": 0,
-    "id": "642c3de6723d84334640fd00"
+    "id": "642c70783e48628e24e78a24"
   },
   {
     "email": "natalie.chen@example.com",
-    "password": "SecureP@ssword3",
+    "password": "$2b$05$jEqLHgoZi9daDKPGZWGUy.z9cFpMm7oYGmuV5EMklKFvBAHZnUkO6",
     "__v": 0,
-    "id": "642c3de6723d84334640fd01"
+    "id": "642c70783e48628e24e78a2a"
+  },
+  {
+    "email": "kate.johnson@example.com",
+    "password": "$2b$05$w8BkmIn2fkyEbVqsm.G9qeob3Ntb44hSqoaEX0YW1a1hRhqaf0Xbm",
+    "__v": 0,
+    "id": "642c70783e48628e24e78a26"
+  },
+  {
+    "email": "william.taylor@example.com",
+    "password": "$2b$05$q3Geqn//qsNHxm6MLsd8uuCEviqI.CPw0euP31UaUQc.Ahv2odlHi",
+    "__v": 0,
+    "id": "642c70783e48628e24e78a29"
+  },
+  {
+    "email": "samuel.jackson@example.com",
+    "password": "$2b$05$f8vuOnYllx.hR07W4a7VD.YRvCj0dYqbta/KAEuhvo38FvHB69Gqa",
+    "__v": 0,
+    "id": "642c70783e48628e24e78a23"
+  },
+  {
+    "email": "jane.smith@example.com",
+    "password": "$2b$05$YYA8vePuTHbJjWQ0n6pwqOrrJDO924OCv3PxlUk7CvQL5hCMq2ad2",
+    "__v": 0,
+    "id": "642c70783e48628e24e78a22"
+  },
+  {
+    "email": "david.brown@example.com",
+    "password": "$2b$05$E.Bh6H3uSA318Pfs8oMfa.PKlXCZU/wMk3drvALC3Duoc2mK4vUPi",
+    "__v": 0,
+    "id": "642c70783e48628e24e78a25"
+  },
+  {
+    "email": "john.doe@example.com",
+    "password": "$2b$05$StCTcUYysy3WY1fC/k8Yo.7F/xB4VRBK3mdon6p/AuKr6R5KIc7e.",
+    "__v": 0,
+    "id": "642c70783e48628e24e78a21"
   }
 ]

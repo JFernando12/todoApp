@@ -5,11 +5,10 @@ import { Task } from '../models';
 const router = Router();
 
 router.get('/tasks', requireAuth, async (req: Request, res: Response) => {
-  console.log('Estoy en tasks', req.currentUser);
   const user = req.currentUser;
 
   const tasks = await Task.find({ userId: user?.id });
-  res.send('All tasks from a user');
+  res.send(tasks);
 });
 
 export { router as routerGetTasks };
