@@ -1,6 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
-import { currentUser } from './middlewares/ current-user';
+import { currentUser } from './middlewares/current-user';
 import {
   routerSignup,
   routerSignin,
@@ -10,6 +10,7 @@ import {
   routerGetTasks,
   routerUpdateTask,
 } from './routes';
+import { routerGetUsers } from './routes/getUsers';
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
@@ -26,5 +27,6 @@ app.use(routerDeleteTask);
 app.use(routerGetTask);
 app.use(routerGetTasks);
 app.use(routerUpdateTask);
+app.use(routerGetUsers);
 
 export { app };
