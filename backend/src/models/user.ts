@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
 interface UserAttrs {
   email: string;
@@ -35,6 +36,14 @@ const userSchema = new mongoose.Schema(
     },
   }
 );
+
+userSchema.pre('save', async function (done) {
+  if (this.isModified('password')) {
+    const hashed = await bcrypt.hash(this.get('password'), 5);
+    this.set('password', hashed);
+  }
+  done();
+});
 
 userSchema.statics.build = (attrs: UserAttrs) => {
   return new User(attrs);
