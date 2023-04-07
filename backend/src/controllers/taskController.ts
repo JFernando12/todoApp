@@ -5,8 +5,6 @@ const createTask = async (req: Request, res: Response) => {
   const userId = req.currentUser!.id;
   const { name, description } = req.body;
 
-  console.log(req.currentUser);
-
   const task = Task.build({
     name,
     description,

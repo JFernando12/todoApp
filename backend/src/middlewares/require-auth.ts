@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
+import { NotAuthorizedError } from '../errors';
 
 export const requireAuth = (
   req: Request,
@@ -6,7 +7,7 @@ export const requireAuth = (
   next: NextFunction
 ) => {
   if (!req.currentUser) {
-    throw new Error('There is not currentUser');
+    throw new NotAuthorizedError();
   }
 
   next();
