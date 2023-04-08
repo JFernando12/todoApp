@@ -11,8 +11,8 @@ export class RequestValidationError extends CustomError {
   }
 
   serializeErrors(): { message: string; field?: string | undefined }[] {
-    return this.errs.map(({ msg, value }) => {
-      return { message: msg, field: value };
+    return this.errs.map(({ msg, param }) => {
+      return { message: msg, field: param };
     });
   }
 }

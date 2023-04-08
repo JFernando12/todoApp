@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import Jwt from 'jsonwebtoken';
 import { JWT_KEY } from '../env';
+import { InvalidCredentialsError } from '../errors/invalid-credentials-error';
 
 interface UserPayload {
   id: string;

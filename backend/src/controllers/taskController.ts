@@ -13,7 +13,7 @@ const createTask = async (req: Request, res: Response) => {
   });
   await task.save();
 
-  res.send(req.currentUser);
+  res.send({ task });
 };
 
 interface UpdateTaskData {
@@ -28,14 +28,14 @@ const updateTask = async (req: Request, res: Response) => {
   const { name, description, done } = req.body;
 
   const data: UpdateTaskData = {};
-  if (name) data.name = name;
-  if (description) data.description = description;
-  if (done) data.done = done;
+  if (name != undefined) data.name = name;
+  if (description != undefined) data.description = description;
+  if (done != undefined) data.done = done;
 
   const task = await Task.findOneAndUpdate({ _id: taskId, userId }, data, {
     new: true,
   });
-  res.send(task);
+  res.send({ task });
 };
 
 const deleteTask = async (req: Request, res: Response) => {
@@ -51,7 +51,7 @@ const getTask = async (req: Request, res: Response) => {
   const taskId = req.params.taskId;
 
   const task = await Task.findOne({ _id: taskId, userId });
-  res.send(task);
+  res.send({ task });
 };
 
 const getTasks = async (req: Request, res: Response) => {

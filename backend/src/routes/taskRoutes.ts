@@ -16,7 +16,13 @@ router.post(
   taskController.createTask
 );
 
-router.put('/:taskId', requireAuth, taskController.updateTask);
+router.put(
+  '/:taskId',
+  requireAuth,
+  [body('done').isBoolean().withMessage('done must be boolean')],
+  validateRequest,
+  taskController.updateTask
+);
 router.delete('/:taskId', requireAuth, taskController.deleteTask);
 router.get('/:taskId', requireAuth, taskController.getTask);
 router.get('/', requireAuth, taskController.getTasks);

@@ -3,6 +3,7 @@ import { User } from '../models';
 import JsonWebToken from 'jsonwebtoken';
 import { JWT_KEY } from '../env';
 import bcrypt from 'bcrypt';
+import { InvalidCredentialsError } from '../errors';
 
 const signup = async (req: Request, res: Response) => {
   const { email, password } = req.body;
@@ -33,7 +34,7 @@ const signin = async (req: Request, res: Response) => {
   const isMatched = await bcrypt.compare(password, user.password);
 
   if (!isMatched) {
-    return res.send('Credentials are incorrects');
+    throw new InvalidCredentialsError();
   }
 
   const token = JsonWebToken.sign(
