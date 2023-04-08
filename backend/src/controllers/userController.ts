@@ -28,7 +28,7 @@ const signin = async (req: Request, res: Response) => {
   console.log('headers', req.headers);
 
   if (!user) {
-    return res.send('User does not exist');
+    throw new InvalidCredentialsError();
   }
 
   const isMatched = await bcrypt.compare(password, user.password);

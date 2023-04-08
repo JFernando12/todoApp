@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import morgan from 'morgan';
 import 'express-async-errors';
+import cors from 'cors';
 import { currentUser } from './middlewares/current-user';
 import { routerUser, routerTask } from './routes';
 import { errorHandler } from './middlewares';
@@ -9,6 +10,7 @@ import { NotFoundError } from './errors';
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors());
 app.use(morgan('dev'));
 
 app.use(currentUser);

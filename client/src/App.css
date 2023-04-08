@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.tasks-container {
+  width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.438);
+}
+
+.task-container {
+  border-bottom: 1px solid black;
+  display: flex;
+}
+.task-name {
+  border: 1px solid black;
+}
+.task-description {
+  border: 1px solid black;
+}
+.task-done {
+  border: 1px solid black;
+}
+.greenButton {
+  color: white;
+  background-color: green;
+}
+.whiteButton {
+  color: white;
+  background-color: red;
+}
