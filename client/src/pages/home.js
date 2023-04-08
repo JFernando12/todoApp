@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { getTasksApi, taskDoneApi } from '../utils/api';
+import { deleteTaskApi, getTasksApi, taskDoneApi } from '../utils/api';
+import CreateTask from '../components/CreateTask';
+import Nav from '../components/Nav';
 
 const Home = () => {
   const [tasks, setTasks] = useState([]);
@@ -13,24 +15,32 @@ const Home = () => {
     getTasks();
   };
 
+  const deleteTask = async (taskId) => {
+    await deleteTaskApi(taskId);
+    getTasks();
+  };
+
   useEffect(() => {
     getTasks();
   }, []);
 
   return (
     <div>
+      <Nav></Nav>
+      <CreateTask setTasks={setTasks}></CreateTask>
       <div className="tasks-container">
         {tasks.map(({ id, name, description, done }) => {
           return (
             <div key={id} className="task-container">
-              <div className="task-name">{name}</div>
-              <div className="task-description">{description}</div>
               <button
                 className={done ? 'greenButton' : 'whiteButton'}
                 onClick={() => taskDone(id, done)}
               >
-                done
+                {done ? 'Done' : 'Pending'}
               </button>
+              <div className="task-name">{name}</div>
+              <div className="task-description">{description}</div>
+              <button onClick={() => deleteTask(id)}>Delete</button>
             </div>
           );
         })}

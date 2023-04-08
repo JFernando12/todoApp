@@ -52,3 +52,27 @@ export const taskDoneApi = async (taskId, done) => {
 
   return response;
 };
+
+export const createTaskApi = async ({ name, description }) => {
+  const response = {
+    errors: null,
+  };
+  const token = localStorage.getItem('token');
+  try {
+    await Axios.post(
+      '/tasks',
+      { name, description },
+      { headers: { Authorization: token } }
+    );
+  } catch (error) {
+    const errors = error.response;
+    response.errors = errors.data;
+  }
+
+  return response;
+};
+
+export const deleteTaskApi = async (taskId) => {
+  const token = localStorage.getItem('token');
+  await Axios.delete(`/tasks/${taskId}`, { headers: { Authorization: token } });
+};

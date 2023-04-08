@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { signinApi } from '../utils/api';
 import { saveToken } from '../services/auth';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [errors, setErrors] = useState([]);
+
+  const navigate = useNavigate();
 
   const onChange = (e) => {
     e.preventDefault();
@@ -26,6 +29,8 @@ const Login = () => {
     }
     if (!data.token) return;
     saveToken(data.token);
+
+    navigate('/');
   };
 
   return (
