@@ -16,6 +16,7 @@ const Home = () => {
   useEffect(() => {
     getTasks();
   }, []);
+
   return (
     <div>
       <div className="tasks-container">
