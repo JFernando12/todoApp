@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { deleteTaskApi, getTasksApi, taskDoneApi } from '../utils/api';
 import CreateTask from '../components/CreateTask';
-import Nav from '../components/Nav';
 
 const Home = () => {
   const [tasks, setTasks] = useState([]);
@@ -26,7 +25,6 @@ const Home = () => {
 
   return (
     <div>
-      <Nav></Nav>
       <CreateTask setTasks={setTasks}></CreateTask>
       <div className="tasks-container">
         {tasks.map(({ id, name, description, done }) => {

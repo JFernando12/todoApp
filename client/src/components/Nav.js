@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { isAuth } from '../utils/auth';
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -9,9 +10,14 @@ const Nav = () => {
     navigate('/login');
   };
 
+  const signin = () => {
+    navigate('/signin');
+  };
+
   return (
     <div>
-      <button onClick={logout}>Logout</button>
+      {isAuth() && <button onClick={logout}>Logout</button>}
+      {!isAuth() && <button onClick={signin}>Signin</button>}
     </div>
   );
 };
