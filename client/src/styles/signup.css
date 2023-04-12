@@ -1,0 +1,10 @@
+.signup {
+  display: flex;
+  justify-content: center;
+}
+.container-signup {
+  background-color: rgba(48, 118, 71, 0.539);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}

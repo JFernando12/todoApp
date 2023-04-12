@@ -4,13 +4,14 @@ import JsonWebToken from 'jsonwebtoken';
 import { JWT_KEY } from '../env';
 import bcrypt from 'bcrypt';
 import { InvalidCredentialsError } from '../errors';
+import { DuplicateUserError } from '../errors/duplicate-user-error';
 
 const signup = async (req: Request, res: Response) => {
   const { email, password } = req.body;
 
   const userExist = await User.find({ email });
   if (userExist.length > 0) {
-    return res.send('User already exist');
+    throw new DuplicateUserError();
   }
 
   const user = User.build({ email, password });

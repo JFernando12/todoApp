@@ -29,17 +29,21 @@ const Home = () => {
       <div className="tasks-container">
         {tasks.map(({ id, name, description, done }) => {
           return (
-            <div key={id} className="task-container">
-              <button
-                className={done ? 'greenButton' : 'whiteButton'}
-                onClick={() => taskDone(id, done)}
-              >
-                {done ? 'Done' : 'Pending'}
-              </button>
-              <div className="task-name">{name}</div>
-              <div className="task-description">{description}</div>
-              <button onClick={() => deleteTask(id)}>Delete</button>
-            </div>
+            <tr key={id} className="task-container">
+              <td>
+                <button
+                  className={done ? 'greenButton' : 'whiteButton'}
+                  onClick={() => taskDone(id, done)}
+                >
+                  {done ? 'Done' : 'Pending'}
+                </button>
+              </td>
+              <td className="task-name">{name}</td>
+              <td className="task-description">{description}</td>
+              <td>
+                <button onClick={() => deleteTask(id)}>Delete</button>
+              </td>
+            </tr>
           );
         })}
       </div>

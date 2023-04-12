@@ -3,12 +3,8 @@ h2 {
 }
 
 .login {
-  border: 1px solid black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 600px;
 }
 
 .container-login-form {

@@ -23,6 +23,23 @@ export const signinApi = async ({ email, password }) => {
   return response;
 };
 
+export const signupApi = async ({ email, password }) => {
+  const response = {
+    token: null,
+    errors: null,
+  };
+
+  try {
+    const { data } = await Axios.post('/users/signup', { email, password });
+    response.token = data.token;
+  } catch (error) {
+    const errors = error.response;
+    response.errors = errors.data;
+  }
+
+  return response;
+};
+
 export const getTasksApi = async () => {
   const token = localStorage.getItem('token');
   const { data } = await Axios.get('/tasks', {
