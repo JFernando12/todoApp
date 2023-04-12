@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { signinApi } from '../utils/api';
 import { saveToken } from '../services/auth';
 import { useNavigate } from 'react-router-dom';
+import '../styles/login.css';
 
 const Login = () => {
   const [email, setEmail] = useState(null);
@@ -34,21 +35,32 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <div>
-          <label>Email: </label>
-          <input type="text" name="email" onChange={onChange}></input>
-        </div>
-        <div>
-          <label>Password: </label>
-          <input type="text" name="password" onChange={onChange}></input>
-        </div>
-        <button type="submit">Send</button>
-      </form>
-      {errors.map((err) => (
-        <div key={err.message}>{err.message}</div>
-      ))}
+    <div className="login">
+      <div className="container-login-form">
+        <h2>Login</h2>
+        <form onSubmit={onSubmit}>
+          <input
+            type="text"
+            name="email"
+            onChange={onChange}
+            placeholder="Email"
+          ></input>
+          <input
+            type="text"
+            name="password"
+            onChange={onChange}
+            placeholder="Password"
+          ></input>
+          <button type="submit" className="button-login">
+            Send
+          </button>
+        </form>
+        <ul className="container-errors">
+          {errors.map((err) => (
+            <li key={err.message}>{err.message}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
