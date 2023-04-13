@@ -10,14 +10,14 @@ const Nav = () => {
     navigate('/login');
   };
 
-  const signin = () => {
-    navigate('/signin');
+  const signup = () => {
+    navigate('/signup');
   };
 
   return (
     <div>
       {isAuth() && <button onClick={logout}>Logout</button>}
-      {!isAuth() && <button onClick={signin}>Signin</button>}
+      {!isAuth() && <button onClick={signup}>Signup</button>}
     </div>
   );
 };
