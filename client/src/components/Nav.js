@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { isAuth } from '../utils/auth';
+import '../styles/nav.css';
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -15,9 +16,17 @@ const Nav = () => {
   };
 
   return (
-    <div>
-      {isAuth() && <button onClick={logout}>Logout</button>}
-      {!isAuth() && <button onClick={signup}>Signup</button>}
+    <div className="nav">
+      {isAuth() && (
+        <button className="button-nav" onClick={logout}>
+          Logout
+        </button>
+      )}
+      {!isAuth() && (
+        <button className="button-nav" onClick={signup}>
+          Signup
+        </button>
+      )}
     </div>
   );
 };

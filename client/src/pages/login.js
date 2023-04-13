@@ -40,12 +40,14 @@ const Login = () => {
         <h2>Login</h2>
         <form className="form-login" onSubmit={onSubmit}>
           <input
+            className="input-login"
             type="text"
             name="email"
             onChange={onChange}
             placeholder="Email"
           ></input>
           <input
+            className="input-login"
             type="text"
             name="password"
             onChange={onChange}

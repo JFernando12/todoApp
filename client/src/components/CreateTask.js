@@ -28,8 +28,8 @@ const CreateTask = ({ setTasks }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
+    <div className="createTask">
+      <form className="form-createTask" onSubmit={onSubmit}>
         <input
           name="name"
           type="text"
@@ -46,7 +46,9 @@ const CreateTask = ({ setTasks }) => {
           placeholder="Description"
         />
 
-        <button type="submit">Create</button>
+        <button className="button-createTask" type="submit">
+          Create
+        </button>
       </form>
     </div>
   );

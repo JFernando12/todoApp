@@ -8,9 +8,9 @@ import Signup from './pages/signup';
 
 function App() {
   return (
-    <Router>
-      <Nav></Nav>
-      <div className="App">
+    <div className="App">
+      <Router>
+        <Nav></Nav>
         <Routes>
           <Route path="/login" Component={Login}></Route>
           <Route path="/signup" Component={Signup}></Route>
@@ -18,9 +18,9 @@ function App() {
             path="/"
             element={<PrivateRoute Component={Home}></PrivateRoute>}
           ></Route>
-        </Routes>
-      </div>
-    </Router>
+        </Routes>{' '}
+      </Router>
+    </div>
   );
 }
 
