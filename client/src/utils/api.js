@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const Axios = axios.create({ baseURL: 'http://localhost:3001/' });
+const Axios = axios.create({ baseURL: 'http://localhost:3001' });
 
 export const getUsersApi = async () => {
   const users = await Axios.get(`users`);

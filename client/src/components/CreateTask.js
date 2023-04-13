@@ -30,19 +30,22 @@ const CreateTask = ({ setTasks }) => {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <div>
-          <label>Name:</label>
-          <input name="name" type="text" value={name} onChange={onChange} />
-        </div>
-        <div>
-          <label>Description:</label>
-          <input
-            name="description"
-            type="text"
-            value={description}
-            onChange={onChange}
-          />
-        </div>
+        <input
+          name="name"
+          type="text"
+          value={name}
+          onChange={onChange}
+          placeholder="Name"
+        />
+
+        <input
+          name="description"
+          type="text"
+          value={description}
+          onChange={onChange}
+          placeholder="Description"
+        />
+
         <button type="submit">Create</button>
       </form>
     </div>

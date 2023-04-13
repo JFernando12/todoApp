@@ -16,7 +16,7 @@ h2 {
   border-radius: 15px;
 }
 
-form {
+.form-login {
   border-top: 1px solid rgba(45, 45, 70, 0.479);
   display: flex;
   flex-direction: column;

@@ -37,7 +37,7 @@ const Signup = () => {
     <div className="signup">
       <div className="container-signup">
         <h2>Signup</h2>
-        <form onSubmit={onSubmit}>
+        <form className="form-login" onSubmit={onSubmit}>
           <input
             type="text"
             name="email"

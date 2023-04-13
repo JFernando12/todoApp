@@ -1,0 +1,18 @@
+.home {
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+
+.container-tasks {
+  padding: 20px;
+  background-color: gray;
+  justify-content: center;
+  min-width: 50px;
+  border-radius: 10px;
+}
+
+.tasks {
+  display: flex;
+  justify-content: center;
+}
