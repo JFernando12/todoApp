@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const Axios = axios.create({ baseURL: 'http://localhost:3001' });
+const Axios = axios.create({ baseURL: process.env.REACT_APP_BASE_URL });
 
 export const getUsersApi = async () => {
   const users = await Axios.get(`users`);
@@ -13,6 +13,7 @@ export const signinApi = async ({ email, password }) => {
     errors: null,
   };
   try {
+    console.log('base_url', process.env.REACT_APP_BASE_URL);
     const { data } = await Axios.post('/users/signin', { email, password });
     response.token = data.token;
   } catch (error) {
